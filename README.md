@@ -6,18 +6,27 @@ Google Machine Learning Recipes series, I was moved to try my hand at it, despit
 a limited and rusty knowledge of Python. What I gathered from that series is that there isn't 
 a huge amount of coding required to get really amazing results. 
 
-Scikit gives you a bunch of powerful tools that you can easily use to make predictions about new, 
-unlabeled data, based on previously observed labeled data.
+Scikit gives you a bunch of powerful tools that you can easily use to do things like make predictions about 
+new, unlabeled data based upon previously observed, labeled data. Read more about its tractable 
+[problem domains](http://scikit-learn.org/stable/tutorial/basic/tutorial.html).
 
-The keys to success with it appear to be: 
+You can, for example, take a bunch of 'labeled data' (such as email subject lines labeled 'spam' or 'not spam'), 
+split it into two piles, one for _training_ and one for _testing_. 
+
+Next you 'train a model' with the first pile, and test the accuracy of its predictions by feeding it 
+the data in the second pile. Then, see if the labels it predicts match the actual labels on the data. 
+If accuracy is poor, what can be done to improve it?
+
+The keys to success appear to be: 
 
 * Get a lot of _labeled_ data to train and test with. 
-* Make sure that the labels have high value. 
+* Make sure that the dimension you choose to label has a high value to the model. 
 * Understand the different types of classifiers, and how to choose the right one for your problem and data set.
 
 ## Ok, what are we doing?
-To start, I want to use scikit-learn to train and test a simple model. 
-Next, build the Nearest Neighbor classifier described in the fifth installment of Mr. Gordon's series: [Writing Our First Classifier](https://youtu.be/AoeEHqVSNOw)
+To start, I want to use scikit-learn to train and test a simple model as described above with just a few lines of code.
+Next, we build the Nearest Neighbor classifier described in the fifth installment of 
+Josh Gordon's series, [Writing Our First Classifier](https://youtu.be/AoeEHqVSNOw)
 
 ## Fitting our kit...
 
@@ -76,3 +85,8 @@ python3 -m pip install scikit-learn[alldeps]
 
 
 Either way, scikit-learn and all its dependencies should now be installed. Wasn't that special?
+
+## Trying out Josh Gordon's simple classifier demo
+__Spoiler alert__ there are some problems.
+
+
