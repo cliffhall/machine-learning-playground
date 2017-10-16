@@ -87,6 +87,19 @@ python3 -m pip install scikit-learn[alldeps]
 Either way, scikit-learn and all its dependencies should now be installed. Wasn't that special?
 
 ## Trying out Josh Gordon's simple classifier demo
-__Spoiler alert__ there are some problems.
+__Spoiler alert__ there are some problems...
 
+### The module for train_test_split has changed
+The video says to do the following...
 
+```
+from sklearn.cross_validation import train_test_split
+```
+
+But error output tells us that cross_validation is deprecated, use model_selection module instead:
+
+```
+from sklearn.model_selection import train_test_split
+```
+
+python3 jg-my-first-classifier.py 
