@@ -87,7 +87,7 @@ python3 -m pip install scikit-learn[alldeps]
 Either way, scikit-learn and all its dependencies should now be installed. Wasn't that special?
 
 ## Trying out Josh Gordon's simple classifier demo
-__Spoiler alert__ there are some problems...
+There are couple of minor problems...
 
 ### The module for train_test_split has changed
 The video says to do the following...
@@ -103,3 +103,30 @@ from sklearn.model_selection import train_test_split
 ```
 
 python3 jg-my-first-classifier.py 
+
+### The print statement
+The last line that prints out the accuracy score results in the video is:
+
+```
+print accuracy_score(y_test, predictions)
+```
+
+That threw a syntax error for me, possibly because I'm using Python 3. Anyway the following works:
+
+```
+print(accuracy_score(y_test, predictions))
+```
+
+## Success!
+Running:
+
+```
+python3 jg-my-first-classifier.py 
+```
+
+
+yields: 
+
+```
+0.973333333333
+```
