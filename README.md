@@ -11,11 +11,9 @@ new, unlabeled data based upon previously observed, labeled data. Read more abou
 [problem domains](http://scikit-learn.org/stable/tutorial/basic/tutorial.html).
 
 You can, for example, take a bunch of 'labeled data' (such as email subject lines labeled 'spam' or 'not spam'), 
-split it into two piles, one for _training_ and one for _testing_. 
-
-Next you 'train a model' with the first pile, and test the accuracy of its predictions by feeding it 
-the data in the second pile. Then, see if the labels it predicts match the actual labels on the data. 
-If accuracy is poor, what can be done to improve it?
+split it into two piles, one for _training_ and one for _testing_. Next you 'train a model' with the first pile, 
+and test the accuracy of its predictions by feeding it  the data in the second pile. Then, see if the labels it 
+predicts match the actual labels on the data. If accuracy is poor, what can be done to improve it?
 
 The keys to success appear to be: 
 
