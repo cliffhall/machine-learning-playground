@@ -68,8 +68,8 @@ Then in the same directory, run:
 sudo python3 get-pip.py --prefix=/usr/local/ 
 ```
 
-This seemed to install wheel but not pip. Afterward there was still no output from which pip. 
-Eventually, I found [a way that works](https://stackoverflow.com/a/24151884/203704) even if 
+This seemed to install wheel but not pip. Eventually, I found 
+[a way that works](https://stackoverflow.com/a/24151884/203704) even if 
 you can't find pip: _supply the pip command to python3 using the '-m' argument._
 
 ### Scikit-learn
