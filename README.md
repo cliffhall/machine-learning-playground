@@ -18,7 +18,7 @@ predicts match the actual labels on the data. If accuracy is poor, what can be d
 The keys to success appear to be: 
 
 * Get a lot of _labeled_ data to train and test with. 
-* Make sure that the dimension you choose to label has a high value to the model. 
+* Make sure that each dimension you choose to label has a high value to the model. 
 * Understand the different types of classifiers, and how to choose the right one for your problem and data set.
 
 ## Ok, what are we doing?
