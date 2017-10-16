@@ -45,7 +45,8 @@ It requires:
   * SciPy (>= 0.13.3)
 
 ### Python
-I Installed [Python 3.6.3](https://www.python.org/downloads/) because, _"Python 2.x is legacy, Python 3.x is the present and future of the language."_
+I Installed [Python 3.6.3](https://www.python.org/downloads/) because, 
+_"Python 2.x is legacy, Python 3.x is the present and future of the language."_
 
 However in a new window python and pythonw still report being version 2.7 (the original version on my Mac).
 Turns out you have to run python3. This makes sense because the version the OS comes with is probably relied 
@@ -83,14 +84,12 @@ pip install scikit-learn[alldeps]
 Otherwise, if you're like me and still can't find pip after installing Python from python.org
 after trying from another terminal window, you can still make it happen with:
 
-
 ```
 python3 -m pip install scikit-learn[alldeps]
 ```
 
 
 Either way, scikit-learn and all its dependencies should now be installed. Wasn't that special?
-
 
 # View the dataset
 In order to understand the data better, you can see a couple of plots of the iris dataset with this script, copied from the scikit-learn website:
@@ -138,9 +137,51 @@ From the scripts directory, running:
 python3 jg-demo-classifier-knn.py 
 ```
 
-
 now yields: 
 
 ```
 0.973333333333
 ```
+
+
+## Moving on to a custom, but random classifier
+Now that we have a script that's able to feed the Iris dataset to scikit-learn's built in KNN classifier,
+we will replace it with a custom classifier, but it will just make a random guess for each prediction,
+just to test the waters of creating a custom classifier. 
+
+With the built in KNN, we saw that the required functions to implement were fit and predict. Have a look at
+jg-demo-classifier-random.py for this easy implementation.
+
+To test this, just run:
+
+```
+python3 jg-demo-classifier-random.py 
+```
+
+and cue a sad trumpet for the result: 
+
+```
+0.32
+```
+
+It works, but has pretty awful accuracy. 
+
+## Now for ScrappyKNN, a custom classifier that could be a contender
+In jg-demo-classifier-scrappy-knn.py, we fill out the functionality of a barebones Nearest Neighbor classifier.
+The video gives us the rundown on the math. 
+
+Try it now!
+
+```
+python3 jg-demo-classifier-scrappy-knn.py 
+```
+
+and be amazed: 
+
+```
+0.986666666667
+```
+
+Nice. Even though it's barebones, the ScrappyKNN was good enough for making predictions based on this dataset.
+
+## Thanks Josh
