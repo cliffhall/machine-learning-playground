@@ -26,7 +26,12 @@ The keys to success appear to be:
 ## Ok, what are we doing?
 To start, I want to use scikit-learn to train and test a simple model as described above with just a few lines of code.
 Next, we build the Nearest Neighbor classifier described in the fifth installment of 
-Josh Gordon's series, [Writing Our First Classifier](https://youtu.be/AoeEHqVSNOw)
+Josh Gordon's series, [Writing Our First Classifier](https://youtu.be/AoeEHqVSNOw) 
+
+That demo loads the [Iris dataset](http://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html), which 
+consists of 3 different types of irises’ (Setosa, Versicolour, and Virginica) petal and sepal length. The goal is to train 
+a model to be able to predict the type of iris given the petal and sepal length. The dataset is part of scikit-learn, so 
+in order to get going, we don't need our own data. 
 
 ## Fitting our kit...
 
@@ -86,8 +91,17 @@ python3 -m pip install scikit-learn[alldeps]
 
 Either way, scikit-learn and all its dependencies should now be installed. Wasn't that special?
 
-## Trying out Josh Gordon's simple classifier demo
-There are couple of minor problems...
+
+# View the dataset
+In order to understand the data better, you can see a couple of plots of the iris dataset with this script, copied from the scikit-learn website:
+
+```
+python3 plot_iris_dataset.py
+```
+
+## Trying out the KNN classifier demo
+The first step in the video was to use the built-in K-Nearest Neighbor classifier. 
+There were a couple of teensy issues with the code as shown.
 
 ### The module for train_test_split has changed
 The video says to do the following...
@@ -96,7 +110,7 @@ The video says to do the following...
 from sklearn.cross_validation import train_test_split
 ```
 
-But error output tells us that cross_validation is deprecated, use model_selection module instead:
+But the console output tells us that cross_validation is deprecated, use model_selection module instead:
 
 ```
 from sklearn.model_selection import train_test_split
@@ -117,15 +131,15 @@ That threw a syntax error for me, possibly because I'm using Python 3. Anyway th
 print(accuracy_score(y_test, predictions))
 ```
 
-## Success!
-Running:
+### Success!
+From the scripts directory, running:
 
 ```
-python3 jg-my-first-classifier.py 
+python3 jg-demo-classifier-knn.py 
 ```
 
 
-yields: 
+now yields: 
 
 ```
 0.973333333333
