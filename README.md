@@ -33,6 +33,13 @@ in order to get going, we don't need our own data.
 
 ## Fitting our kit...
 
+### Run Locally, Using the Docker Container
+If you don't want to litter your machine with competing versions of python and its dependencies, causing chaos across your projects, just follow these steps:
+
+* Install [Docker Desktop](https://www.docker.com/) for your machine.
+* In this project's folder, run `docker compose up --build`.
+
+### Run Locally On Your Computer
 The key tool we're going to use is [scikit-learn](http://scikit-learn.org/stable/install.html)
 
 It requires:
@@ -42,7 +49,7 @@ It requires:
   * NumPy (>= 1.8.2)
   * SciPy (>= 0.13.3)
 
-### Python
+#### Python
 I Installed [Python 3.6.3](https://www.python.org/downloads/) because, 
 _"Python 2.x is legacy, Python 3.x is the present and future of the language."_
 
@@ -50,7 +57,7 @@ However in a new window python and pythonw still report being version 2.7 (the o
 Turns out you have to run python3. This makes sense because the version the OS comes with is probably relied 
 upon by installed applications and we don't want to mess that up.
 
-### Pip
+#### Pip
 Getting pip is a pain! The python.org page says you should have it if you installed python from their site, 
 but a ...
 
@@ -72,7 +79,7 @@ This seemed to install wheel but not pip. Eventually, I found
 [a way that works](https://stackoverflow.com/a/24151884/203704) even if 
 you can't find pip: _supply the pip command to python3 using the '-m' argument._
 
-### Scikit-learn
+#### Scikit-learn
 If you have pip, just run:
 
 ```
@@ -85,7 +92,6 @@ after trying from another terminal window, you can still make it happen with:
 ```
 python3 -m pip install scikit-learn[alldeps]
 ```
-
 
 Either way, scikit-learn and all its dependencies should now be installed. Wasn't that special?
 
@@ -141,7 +147,6 @@ now yields:
 0.973333333333
 ```
 
-
 ## Moving on to a custom, but random classifier
 Now that we have a script that's able to feed the Iris dataset to scikit-learn's built in KNN classifier,
 we will replace it with a custom classifier, but it will just make a random guess for each prediction,
@@ -182,4 +187,4 @@ and be amazed:
 
 Nice. Even though it's barebones, the ScrappyKNN was good enough for making predictions based on this dataset.
 
-## Thanks Josh
+### Thanks Josh!
